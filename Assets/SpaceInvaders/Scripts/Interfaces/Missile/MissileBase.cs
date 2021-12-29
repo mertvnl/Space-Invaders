@@ -24,7 +24,14 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        Debug.Log(collision.transform.root.name);
+
+        Destroy(collision.attachedRigidbody.gameObject);
+
+        if (!missileData.DontDestroyOnCollision)
+        {
+            DestroyMissile();
+        }
     }
 
     private void MoveMissile()
@@ -45,6 +52,6 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     private void DestroyMissile()
     {
-        //Destroy
+        Destroy(gameObject);
     }
 }

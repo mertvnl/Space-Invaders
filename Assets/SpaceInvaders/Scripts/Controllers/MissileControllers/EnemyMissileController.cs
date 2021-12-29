@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class EnemyMissileController : MissileControllerBase
 {
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     private void Awake()
     {
         Initialise();    
