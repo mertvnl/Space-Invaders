@@ -8,10 +8,10 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     private bool isInitialised;
 
-    public virtual void Initialise(int layerIndex)
+    public virtual void Initialise(int ownerLayerIndex)
     {
         isInitialised = true;
-        gameObject.layer = layerIndex;
+        gameObject.layer = ownerLayerIndex;
         DestroyAfterLifeTime();
     }
 
