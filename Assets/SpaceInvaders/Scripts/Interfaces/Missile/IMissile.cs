@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMissile
 {
-    void Initialise();
+    void Initialise(int layerIndex);
 
 }

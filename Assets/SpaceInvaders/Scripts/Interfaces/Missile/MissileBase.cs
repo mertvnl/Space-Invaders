@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissileBase : MonoBehaviour, IMissile
+public abstract class MissileBase : MonoBehaviour, IMissile
 {
     [SerializeField] private MissileData missileData;
 
     private bool isInitialised;
 
-    public virtual void Initialise()
+    public virtual void Initialise(int layerIndex)
     {
         isInitialised = true;
+        gameObject.layer = layerIndex;
         DestroyAfterLifeTime();
     }
 
@@ -19,6 +20,11 @@ public class MissileBase : MonoBehaviour, IMissile
         if (!isInitialised) return;
 
         MoveMissile();
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
     }
 
     private void MoveMissile()

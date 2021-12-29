@@ -14,6 +14,6 @@ public abstract class MissileControllerBase : MonoBehaviour
     public virtual void FireMissile()
     {
         IMissile missile = Instantiate(defaultMissile, firePoint.position, firePoint.rotation).GetComponent<IMissile>();
-        missile.Initialise();
+        missile.Initialise(gameObject.layer);
     }
 }
