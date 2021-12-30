@@ -54,6 +54,8 @@ public class EnemySpawnerController : MonoBehaviour
 
             startingX += xOffset;
         }
+
+        ShipManager.Instance.UpdateEnemyShipPositions(5);
     }
 
     private Vector3 GetRandomSpawnPosition()

@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db12a4f5c4a750c448853475c65781c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileData: {fileID: 11400000, guid: fe48df90bfbc03c47a3319e474dafc09, type: 2}
+  missileData: {fileID: 11400000, guid: 2323107085dbacd418b5a5dbea8e36ce, type: 2}

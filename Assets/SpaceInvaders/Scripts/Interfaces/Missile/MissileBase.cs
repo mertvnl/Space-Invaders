@@ -24,8 +24,6 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.transform.root.name);
-
         PoolingManager.Instance.DestroyPoolObject(collision.attachedRigidbody.gameObject);
 
         if (!missileData.DontDestroyOnCollision)
