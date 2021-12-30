@@ -48,8 +48,7 @@ public class PoolingManager : Singleton<PoolingManager>
 
     public GameObject InstantiatePoolObject(string Id, Transform parent)
     {
-        GameObject instance = GetPoolObjectById(Id);
-        instance.SetActive(true);
+        GameObject instance = InstantiatePoolObject(Id);
         instance.transform.SetParent(parent);
 
         return instance;
@@ -57,9 +56,7 @@ public class PoolingManager : Singleton<PoolingManager>
 
     public GameObject InstantiatePoolObject(string Id, Vector3 position)
     {
-        GameObject instance = GetPoolObjectById(Id);
-        instance.SetActive(true);
-        instance.transform.SetParent(null);
+        GameObject instance = InstantiatePoolObject(Id);
         instance.transform.position = position;
 
         return instance;
@@ -67,9 +64,7 @@ public class PoolingManager : Singleton<PoolingManager>
 
     public GameObject InstantiatePoolObject(string Id, Vector3 position, Quaternion rotation)
     {
-        GameObject instance = GetPoolObjectById(Id);
-        instance.SetActive(true);
-        instance.transform.SetParent(null);
+        GameObject instance = InstantiatePoolObject(Id);
         instance.transform.position = position;
         instance.transform.rotation = rotation;
 
@@ -78,9 +73,7 @@ public class PoolingManager : Singleton<PoolingManager>
 
     public GameObject InstantiatePoolObject(string Id, Vector3 position, Quaternion rotation, Transform parent)
     {
-        GameObject instance = GetPoolObjectById(Id);
-        instance.SetActive(true);
-        instance.transform.SetParent(null);
+        GameObject instance = InstantiatePoolObject(Id);
         instance.transform.position = position;
         instance.transform.rotation = rotation;
         instance.transform.SetParent(parent);
