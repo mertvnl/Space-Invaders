@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   MissileSpeed: 7.5
+  MissileLifeTime: 10
+  DontDestroyOnCollision: 0

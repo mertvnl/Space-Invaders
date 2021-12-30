@@ -52,6 +52,6 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     private void DestroyMissile()
     {
-        Destroy(gameObject);
+        PoolingManager.Instance.DestroyPoolObject(gameObject);
     }
 }
