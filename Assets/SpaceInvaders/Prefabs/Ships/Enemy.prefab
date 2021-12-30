@@ -250,9 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 381372292185544944}
+  defaultMissileID: DefaultMissileRed
   FireRate: 0
   CanFire: 1
-  defaultMissile: {fileID: 2868817263768675681, guid: 9fd4c3e507985cd4788bf473f4093a78, type: 3}
 --- !u!1 &5469503966373152408
 GameObject:
   m_ObjectHideFlags: 0

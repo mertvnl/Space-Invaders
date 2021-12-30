@@ -49,3 +49,8 @@ MonoBehaviour:
     Size: 20
     AutoGrow: 1
     PooledObjects: []
+  - Id: DefaultMissileRed
+    Prefab: {fileID: 2868817263768675681, guid: 9fd4c3e507985cd4788bf473f4093a78, type: 3}
+    Size: 20
+    AutoGrow: 1
+    PooledObjects: []
