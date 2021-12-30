@@ -21,4 +21,14 @@ public class EnemySpawnerController : MonoBehaviour
         newPos.z = 0;
         transform.position = newPos;
     }
+
+    private void SpawnEnemies()
+    {
+
+    }
+
+    private Vector3 GetRandomSpawnPosition()
+    {
+        return transform.position + (Vector3)Random.insideUnitCircle + Vector3.up;
+    }
 }

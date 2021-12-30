@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "NewMissileData", menuName = "MissileData", order = 1)]
+[CreateAssetMenu(fileName = "NewMissileData", menuName = "MissileData/Missile", order = 1)]
 public class MissileData : ScriptableObject
 {
     [Header("Missile Settings")]

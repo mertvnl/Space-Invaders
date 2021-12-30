@@ -203,6 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5669324896286958501}
   - component: {fileID: 5669324896286958498}
+  - component: {fileID: 6175663118350235074}
   - component: {fileID: 5669324896286958499}
   - component: {fileID: 5669324896286958496}
   - component: {fileID: 959152211}
@@ -249,6 +250,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &6175663118350235074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669324896286958500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e20ce4918b045846b18cc6d136662d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5669324896286958499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,8 +299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f050ffd52c3a54e8ea0fcc55d5d2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missileTypeData: {fileID: 11400000, guid: 5f05a5d16714f7b4f99a8d860a50a70e, type: 2}
+  currentMissile:
+    MissileType: 0
+    ID: 
   firePoint: {fileID: 1353095894}
-  defaultMissileID: DefaultMissileBlue
   FireRate: 0.1
   CanFire: 1
 --- !u!1 &5669324897218774206

@@ -10,9 +10,11 @@ public class EnemyMissileController : MissileControllerBase
         StopAllCoroutines();
     }
 
-    private void Awake()
+    public override void Awake()
     {
-        Initialise();    
+        base.Awake();
+
+        Initialise();
     }
 
     private void Initialise()

@@ -193,6 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5469503965432750467}
   - component: {fileID: 5469503965432750468}
+  - component: {fileID: 7601156532633141413}
   - component: {fileID: 5469503965432750493}
   m_Layer: 9
   m_Name: Enemy
@@ -237,6 +238,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7601156532633141413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469503965432750466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9482a4d2a62efde4eb805d5faeb1bebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShipControllerType: 1
 --- !u!114 &5469503965432750493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,8 +263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127edca1b94d35a4981b7162486fdb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missileTypeData: {fileID: 11400000, guid: 5f05a5d16714f7b4f99a8d860a50a70e, type: 2}
+  currentMissile:
+    MissileType: 1
+    ID: 
   firePoint: {fileID: 381372292185544944}
-  defaultMissileID: DefaultMissileRed
   FireRate: 0
   CanFire: 1
 --- !u!1 &5469503966373152408

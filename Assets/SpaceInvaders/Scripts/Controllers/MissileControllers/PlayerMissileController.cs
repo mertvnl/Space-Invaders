@@ -9,7 +9,6 @@ public class PlayerMissileController : MissileControllerBase
     public PlayerInput PlayerInput { get { return playerInput == null ? playerInput = GetComponent<PlayerInput>() : playerInput; } }
     #endregion
 
-
     private void Update()
     {
         if (PlayerInput.FireInput && CanFire)
@@ -24,4 +23,6 @@ public class PlayerMissileController : MissileControllerBase
         yield return new WaitForSeconds(FireRate);
         CanFire = true;
     }
+
+
 }
