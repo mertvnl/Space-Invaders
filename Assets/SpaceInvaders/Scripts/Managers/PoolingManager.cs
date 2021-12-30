@@ -45,7 +45,13 @@ public class PoolingManager : Singleton<PoolingManager>
 
         return instance;
     }
+    public void DestroyPoolObject(GameObject go)
+    {
+        go.transform.SetParent(transform);
+        go.SetActive(false);
+    }
 
+    #region Instantiate Overloads
     public GameObject InstantiatePoolObject(string Id, Transform parent)
     {
         GameObject instance = InstantiatePoolObject(Id);
@@ -80,13 +86,9 @@ public class PoolingManager : Singleton<PoolingManager>
 
         return instance;
     }
+    #endregion
 
-    public void DestroyPoolObject(GameObject go)
-    {
-        go.transform.SetParent(transform);
-        go.SetActive(false);
-    }
-
+    #region Destroy Overloads
     public void DestroyPoolObject(GameObject go, float delay)
     {
         StartCoroutine(DestroyPoolObjectCo(go, delay));
@@ -97,6 +99,7 @@ public class PoolingManager : Singleton<PoolingManager>
         yield return new WaitForSeconds(delay);
         DestroyPoolObject(go);
     }
+    #endregion
 
     #region HelperMethods
     private GameObject GetPoolObjectById(string Id)
