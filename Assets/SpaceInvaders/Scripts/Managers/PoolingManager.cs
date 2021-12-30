@@ -87,6 +87,17 @@ public class PoolingManager : Singleton<PoolingManager>
         go.SetActive(false);
     }
 
+    public void DestroyPoolObject(GameObject go, float delay)
+    {
+        StartCoroutine(DestroyPoolObjectCo(go, delay));
+    }
+
+    private IEnumerator DestroyPoolObjectCo(GameObject go, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DestroyPoolObject(go);
+    }
+
     #region HelperMethods
     private GameObject GetPoolObjectById(string Id)
     {
