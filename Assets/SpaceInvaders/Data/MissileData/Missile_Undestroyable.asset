@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca5bb32b24fa5464d956b8b614de7eee, type: 3}
-  m_Name: Default
+  m_Name: Missile_Undestroyable
   m_EditorClassIdentifier: 
-  MissileSpeed: 7.5
+  MissileSpeed: 9
   MissileLifeTime: 5
-  DontDestroyOnCollision: 0
+  DontDestroyOnCollision: 1
