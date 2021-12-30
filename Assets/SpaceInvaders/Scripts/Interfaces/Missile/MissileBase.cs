@@ -26,7 +26,7 @@ public abstract class MissileBase : MonoBehaviour, IMissile
     {
         Debug.Log(collision.transform.root.name);
 
-        Destroy(collision.attachedRigidbody.gameObject);
+        PoolingManager.Instance.DestroyPoolObject(collision.attachedRigidbody.gameObject);
 
         if (!missileData.DontDestroyOnCollision)
         {

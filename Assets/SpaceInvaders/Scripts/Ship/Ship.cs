@@ -11,7 +11,7 @@ public enum ShipControllerType
 public class Ship : MonoBehaviour
 {
     public ShipControllerType ShipControllerType;
-    public void Awake()
+    public void OnEnable()
     {
         Initialise();
     }

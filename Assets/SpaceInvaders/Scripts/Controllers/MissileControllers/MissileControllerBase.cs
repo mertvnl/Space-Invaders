@@ -13,7 +13,7 @@ public abstract class MissileControllerBase : MonoBehaviour
     public float FireRate;
     public bool CanFire = true;
 
-    public virtual void Awake()
+    public virtual void OnEnable()
     {
         UpdateCurrentMissile(currentMissile.MissileType);
     }
