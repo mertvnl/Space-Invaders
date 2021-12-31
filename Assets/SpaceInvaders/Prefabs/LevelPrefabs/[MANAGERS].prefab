@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 1250369685}
   - component: {fileID: 1250369684}
   - component: {fileID: 926102472}
+  - component: {fileID: 926102473}
+  - component: {fileID: 9128624406031989546}
   m_Layer: 0
   m_Name: '[MANAGERS]'
   m_TagString: Untagged
@@ -157,3 +159,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpData: {fileID: 11400000, guid: 57a0e8a8f1a2eee4c98431e0c8041eef, type: 2}
   powerUpDropRate: 0.2
+--- !u!114 &926102473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902717479092582915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd181f19b19c5084386289fe95770d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGameWin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameLose:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9128624406031989546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902717479092582915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cf17123dd400242b5d6112cd0b2d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLevelFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLevelStart:
+    m_PersistentCalls:
+      m_Calls: []

@@ -15,8 +15,7 @@ public class ShipManager : Singleton<ShipManager>
         {
             if (Ships[0].ShipControllerType == ShipControllerType.Player)
             {
-                Debug.Log("Win");
-                //win
+                GameManager.Instance.CompleteStage(true);
             }
         }
     }
@@ -36,8 +35,7 @@ public class ShipManager : Singleton<ShipManager>
             Ships.Remove(ship);
             if (ship.ShipControllerType == ShipControllerType.Player)
             {
-                Debug.Log("Lose");
-                //lose
+                GameManager.Instance.CompleteStage(false);
             }
 
             CheckGameState();
