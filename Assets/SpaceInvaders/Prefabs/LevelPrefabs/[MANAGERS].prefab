@@ -59,6 +59,29 @@ MonoBehaviour:
     Size: 20
     AutoGrow: 1
     PooledObjects: []
+  - Id: EnemyShip
+    Prefab: {fileID: 5469503965432750466, guid: ead93723c535784469a67847aa4598a4, type: 3}
+    Size: 30
+    AutoGrow: 1
+    PooledObjects: []
+  - Id: PowerUp_Shield
+    Prefab: {fileID: 9086817402586965112, guid: 7d26bc20e3de799409aa0f802bc80bf2, type: 3}
+    Size: 10
+    AutoGrow: 1
+    PooledObjects: []
+  - Id: PowerUp_Shield_Collectible
+    Prefab: {fileID: 781142054766321842, guid: f96455ed3c6813b48883274992fed546, type: 3}
+    Size: 10
+    AutoGrow: 1
+    PooledObjects: []
+  - Id: PowerUp_AmmoUpgrade_Collectible
+    Prefab: {fileID: 6692247658372864853, guid: 3ad21a9cd24d3c4478248a97df9c3b86, type: 3}
+    Size: 10
+    AutoGrow: 1
+    PooledObjects: []
+  OnPoolInitialised:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8902717479092582915
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,6 +93,7 @@ GameObject:
   - component: {fileID: 8902717479092582916}
   - component: {fileID: 1250369685}
   - component: {fileID: 1250369684}
+  - component: {fileID: 926102472}
   m_Layer: 0
   m_Name: '[MANAGERS]'
   m_TagString: Untagged
@@ -116,4 +140,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affbc3eac88195345b5e2cb42d991fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyShipsMovementUpdateDelay: 7.5
+  enemyShipIndividualDelay: 0.05
   Ships: []
+--- !u!114 &926102472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902717479092582915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9234b9f7d68e9944ad8f4288e7953e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpData: {fileID: 11400000, guid: 57a0e8a8f1a2eee4c98431e0c8041eef, type: 2}
+  powerUpDropRate: 0.2

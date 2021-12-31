@@ -158,25 +158,6 @@ Transform:
   m_Father: {fileID: 1347462248}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &926102471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8902717479092582915, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-  m_PrefabInstance: {fileID: 8902717477910108816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &926102472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926102471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9234b9f7d68e9944ad8f4288e7953e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpData: {fileID: 11400000, guid: 57a0e8a8f1a2eee4c98431e0c8041eef, type: 2}
-  powerUpDropRate: 0.2
 --- !u!1 &1347462247
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,74 +383,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[3].Id
-      value: EnemyShip
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[4].Id
-      value: PowerUp_Shield
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[5].Id
-      value: PowerUp_Shield_Collectible
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[6].Id
-      value: PowerUp_AmmoUpgrade_Collectible
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[3].Size
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[4].Size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[5].Size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[6].Size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[3].Prefab
-      value: 
-      objectReference: {fileID: 5469503965432750466, guid: ead93723c535784469a67847aa4598a4, type: 3}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[4].Prefab
-      value: 
-      objectReference: {fileID: 9086817402586965112, guid: 7d26bc20e3de799409aa0f802bc80bf2, type: 3}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[5].Prefab
-      value: 
-      objectReference: {fileID: 781142054766321842, guid: f96455ed3c6813b48883274992fed546, type: 3}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[6].Prefab
-      value: 
-      objectReference: {fileID: 6692247658372864853, guid: 3ad21a9cd24d3c4478248a97df9c3b86, type: 3}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[3].AutoGrow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[4].AutoGrow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[5].AutoGrow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112115642, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
-      propertyPath: Pools.Array.data[6].AutoGrow
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8902717479092582915, guid: c358d5606f9517d459c9c257fa7a1e1f, type: 3}
       propertyPath: m_Name
       value: '[MANAGERS]'
