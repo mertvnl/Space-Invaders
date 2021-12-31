@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum ShipControllerType
 {
@@ -8,9 +9,10 @@ public enum ShipControllerType
     Enemy
 }
 
-public class Ship : MonoBehaviour
+public class Ship : MonoBehaviour, IDestroyable
 {
     public ShipControllerType ShipControllerType;
+
     public void OnEnable()
     {
         Initialise();
@@ -21,18 +23,23 @@ public class Ship : MonoBehaviour
         Dispose();
     }
 
-    public void Initialise()
+    public virtual void Initialise()
     {
         if (Managers.Instance == null) return;
 
         ShipManager.Instance.AddShip(this);
     }
 
-    public void Dispose()
+    public virtual void Dispose()
     {
         if (Managers.Instance == null) return;
 
         ShipManager.Instance.RemoveShip(this);
-        //Dispose particle
+    }
+
+    public virtual void Destroy()
+    {
+        PoolingManager.Instance.DestroyPoolObject(gameObject);
+        //Destroy fx
     }
 }

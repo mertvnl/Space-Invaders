@@ -24,12 +24,35 @@ public abstract class MissileBase : MonoBehaviour, IMissile
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        PoolingManager.Instance.DestroyPoolObject(collision.attachedRigidbody.gameObject);
-
-        if (!missileData.DontDestroyOnCollision)
+        if (collision.attachedRigidbody != null)
         {
-            DestroyMissile();
+            IDestroyable destroyable = collision.attachedRigidbody.GetComponent<IDestroyable>();
+
+            if (destroyable != null)
+            {
+                destroyable.Destroy();
+
+                if (!missileData.DontDestroyOnCollision)
+                {
+                    DestroyMissile();
+                }
+            }
         }
+        else
+        {
+            IDestroyable destroyable = collision.GetComponent<IDestroyable>();
+
+            if (destroyable != null)
+            {
+                destroyable.Destroy();
+
+                if (!missileData.DontDestroyOnCollision)
+                {
+                    DestroyMissile();
+                }
+            }
+        }
+
     }
 
     private void MoveMissile()

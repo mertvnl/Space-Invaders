@@ -15,7 +15,17 @@ public class BackgroundController : MonoBehaviour
 
     private void Awake()
     {
-        SetRandomDirection();    
+        SetRandomDirection();
+        FitToScreen();
+    }
+
+    private void FitToScreen()
+    {
+        //Fit background to screen size and scale up the texture
+        Vector3 screen2World = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        Vector3 targetScale = new Vector3(screen2World.x * 2, screen2World.y + 1, transform.localScale.z);
+        transform.localScale = targetScale;
+        Material.mainTextureScale = (Vector2)targetScale / 4;
     }
 
     private void SetRandomDirection()

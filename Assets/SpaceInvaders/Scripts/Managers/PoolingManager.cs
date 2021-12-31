@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 [Serializable]
 public class Pool
@@ -18,6 +19,8 @@ public class PoolingManager : Singleton<PoolingManager>
 {
     [SerializeField] private Pool[] Pools;
 
+    [HideInInspector]
+    public UnityEvent OnPoolInitialised = new UnityEvent();
 
     private void Awake()
     {
@@ -35,6 +38,8 @@ public class PoolingManager : Singleton<PoolingManager>
                 instance.SetActive(false);
             }
         }
+
+        OnPoolInitialised.Invoke();
     }
 
     public GameObject InstantiatePoolObject(string Id)

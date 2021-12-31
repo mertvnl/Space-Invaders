@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public abstract class MissileControllerBase : MonoBehaviour
 {
     [SerializeField] private MissileTypeData missileTypeData;
     [SerializeField] private Missile currentMissile;
     [SerializeField] private Transform firePoint;
+
+    public Missile CurrentMissile { get { return currentMissile; } }
 
     public float FireRate;
     public bool CanFire = true;

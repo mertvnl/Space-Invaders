@@ -6,6 +6,11 @@ public class Player : Ship
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //collect powerup
+        IPowerUp powerUp = collision.GetComponent<IPowerUp>();
+
+        if (powerUp != null)
+        {
+            powerUp.Collect(this);
+        }
     }
 }
